@@ -12,7 +12,6 @@ public class Student {
     private String address;
     @OneToMany(mappedBy = "student",cascade = CascadeType.ALL)
     private List<Laptop> laptop;
-
     public int getId() {
         return id;
     }
