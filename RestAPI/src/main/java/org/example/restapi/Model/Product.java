@@ -10,7 +10,6 @@ import lombok.*;
 @Table(name = "product_Details")
 public class Product {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private int productId;
     @Column(name = "productName")
     private String productName;

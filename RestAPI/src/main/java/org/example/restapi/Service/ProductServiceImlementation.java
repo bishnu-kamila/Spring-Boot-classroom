@@ -5,6 +5,8 @@ import org.example.restapi.Repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ProductServiceImlementation implements ProductService{
 
@@ -18,5 +20,10 @@ public class ProductServiceImlementation implements ProductService{
     @Override
     public Product saveProduct(Product product) {
         return productRepository.save(product);
+    }
+
+    @Override
+    public List<Product> fetchAllProduct() {
+        return productRepository.findAll();
     }
 }
